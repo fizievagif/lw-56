@@ -88,9 +88,6 @@
 }
 
 .Burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     border: 2px solid grey;
     border-radius: 5px;
     height: 250px;

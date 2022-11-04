@@ -9,10 +9,10 @@ import './App.css';
 import BurgerMenu from "../../Components/BurgerMenu/BurgerMenu";
 
 const INGREDIENTS: Ingredient[] = [
-  {id: 1, name: 'Meat', price: 50, image: meatImage},
-  {id: 2, name: 'Cheese', price: 20, image: cheeseImage},
-  {id: 3, name: 'Salad', price: 15, image: saladImage},
-  {id: 4, name: 'Bacon', price: 40, image: baconImage},
+  {id: 11, name: 'Meat', price: 50, image: meatImage},
+  {id: 23, name: 'Cheese', price: 20, image: cheeseImage},
+  {id: 33, name: 'Salad', price: 15, image: saladImage},
+  {id: 41, name: 'Bacon', price: 40, image: baconImage},
 ];
 
 const App = () => {
@@ -69,6 +69,7 @@ const App = () => {
       </div>
       <Burger
         price={getTotalPrice}
+        ingredientsBurger={ingredients}
       />
     </div>
   );

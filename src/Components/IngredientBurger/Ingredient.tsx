@@ -2,7 +2,7 @@ import React from 'react';
 import './Ingredient.css';
 import {Ingredient} from '../../types/types';
 
-interface Props extends React.PropsWithChildren{
+interface Props {
   addIngredient: React.MouseEventHandler;
   ingredient: Ingredient;
   amount: number;
@@ -21,6 +21,7 @@ const IngredientBurger: React.FC<Props> = (props) => {
       </button>
       <p className="name-in">{props.ingredient.name}</p>
       <span className="amount-in">x{props.amount}</span>
+      <span>Price: {props.ingredient.price}</span>
       <button
         className="del-in"
         onClick={props.deleteIngredient}
