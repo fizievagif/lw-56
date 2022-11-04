@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Burger = () => {
+interface Props {
+  price: number;
+}
+
+const Burger: React.FC<Props> = (props) => {
   return (
     <div className="Burger">
       <div className="BreadTop">
@@ -9,7 +13,7 @@ const Burger = () => {
       </div>
 
       <div className="BreadBottom"></div>
-      <p>Price: </p>
+      <p>Price: {props.price}</p>
     </div>
   );
 };

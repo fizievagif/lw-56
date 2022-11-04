@@ -48,6 +48,15 @@ const App = () => {
     return acc;
   }, 0);
 
+  const getTotalPrice = ingredients.reduce((acc, item) => {
+    INGREDIENTS.forEach(totalPrice => {
+      if (item.name === totalPrice.name) {
+        return acc += (item.count * totalPrice.price);
+      }
+    });
+    return acc;
+  }, 0);
+
   return (
     <div className="container">
       <div className="ingredient-block">
@@ -58,7 +67,9 @@ const App = () => {
           amount={amount}
         />
       </div>
-      <Burger/>
+      <Burger
+        price={getTotalPrice}
+      />
     </div>
   );
 };
